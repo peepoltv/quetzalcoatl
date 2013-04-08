@@ -50,6 +50,7 @@ html[xmlns] .slides {display: block;}
 			position: relative;
 			display: none;
 			max-height: 352px;
+			min-height: 130px;
 			overflow-y: hidden;
 		}
 		img {
@@ -57,6 +58,7 @@ html[xmlns] .slides {display: block;}
 			width: 100%;
 			max-width: 100%;
 			margin-top: -30px;
+			@media screen and (max-width: 390px) {margin-top: 0;}
 		}
 	}
 
