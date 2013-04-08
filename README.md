@@ -9,4 +9,4 @@ Will soft launch at the Peepol.tv domain shortly and will periodically replace a
 
 Terminal - Compass Ruby Gem (compiles .scss into .css) - Coda 2
 
-** Notes/Warnings/Rules: **
+**Notes/Warnings/Rules:**
