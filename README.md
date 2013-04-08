@@ -7,6 +7,8 @@ Will soft launch at the Peepol.tv domain shortly and will periodically replace a
 
 **Production Stack:**
 
-Terminal - Compass Ruby Gem (compiles .scss into .css) - Coda 2
+Terminal - Compass (compiles .scss into .css) - Coda 2 - GitHub for Mac
 
 **Notes/Warnings/Rules:**
+
+Please do not touch the Sass or Stylesheets directories without first asking Chris. They are synched to Compass for compiling.
