@@ -1,0 +1,186 @@
+/* ==========================================================================
+/* 2.0 - Grid Layout (Responsive)
+   ========================================================================== */
+/* Sections & Content Blocks */
+
+@import "compass";
+
+.section {
+  position: relative;
+  @include clearfix;
+  outline: green dashed 1px;
+}
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+}
+.container-full {
+  max-width: 980px;
+  margin: 0 auto;
+}
+/* Fluid Grid */
+.col {
+  margin-left: 1.64%;
+  float: left;
+  outline: red dashed 1px;
+}
+.col:first-child {
+  margin-left: 0;
+}
+
+/* Columns */
+.one {
+  /* width: 6.333%; */
+  width: 6.86%;
+}
+.two {
+  /* width: 14.667%; */
+  width: 15.32%;
+}
+.three {
+  /* width: 23.0%; */
+  width: 23.78%;
+}
+.four {
+  /* width: 31.333%; */
+  width: 32.24%;
+}
+.five {
+  /* width: 39.667%; */
+  width: 40.7%;
+}
+.six {
+  /* width: 48.0%; */
+  width: 49.16%;
+}
+.seven {
+  /* width: 56.333%; */
+  width: 57.62%;
+}
+.eight {
+  /* width: 64.667%; */
+  width: 66.08%;
+}
+.nine {
+  /* width: 73.0%; */
+  width: 74.54%;
+}
+.ten {
+  /* width: 81.333%; */
+  width: 83%;
+}
+.eleven {
+  /* width: 89.667%; */
+  width: 91.46%;
+}
+.twelve {
+  width: 100%;
+}
+.half {
+  width: 48.0%;
+}
+.one-third {
+  width: 31.333%;
+}
+
+.eight-by-four:first-of-type {
+	@extend .eight;
+
+}
+
+.eight-by-four:last-of-type {
+	@extend .four;
+}
+
+/* ==========================================================================
+/* -- Tablet Devices (Layout, Modifications, etc)
+   ========================================================================== */
+@media only screen and (min-width: 720px) and (max-width: 959px) {
+  html body {
+    max-width: 959px;
+    padding: 0;
+    margin: 0;
+  }
+  .container {
+    width: 700px;
+  }
+  .notablet {
+    display: none;
+  }
+  .showtablet {
+    display: block;
+  }
+}
+/* End Tablet Media Query */
+/* ==========================================================================
+/* -- Mobile Devices (Layout, Modifications, etc)
+   ========================================================================== */
+@media only screen and (max-width: 719px) {
+  html body {
+    max-width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+  .one,
+  .two,
+  .three,
+  .four,
+  .five,
+  .six,
+  .seven,
+  .eight,
+  .nine,
+  .ten,
+  .eleven,
+  .twelve,
+  .eight-by-four {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    float: none;
+  }
+  .container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .navigation a:active,
+  .navigation a:visited {
+    color: #ffffff;
+  }
+  .navigation a:hover {
+    background-color: #333333;
+  }
+  .menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .nav-toggle,
+  .menu a {
+    display: block;
+    background-color: #111111;
+    text-align: center;
+    color: #ffffff;
+    padding: 10px;
+    margin-top: 1px;
+    text-decoration: none;
+  }
+  .nomobile {
+    display: none;
+  }
+  .showmobile {
+    display: block;
+  }
+}
+/* End Mobile Media Query */
+/* ==========================================================================
+/* -- Print Layout
+   ========================================================================== */
+@media print {
+  body {
+    font-family: serif;
+    /* Serif is easier to read offscreen */
+    margin: 0.5cm;
+  }
+}
+/* End Print Media Query */

@@ -1,0 +1,66 @@
+/*
+ * jQuery FlexSlider v1.8
+ * http://flex.madebymufffin.com
+ *
+ * Copyright 2011, Tyler Smith
+ * Free to use under the MIT license.
+ * http://www.opensource.org/licenses/mit-license.php
+ */
+
+
+ /*
+	Modified by HOPE/GLORY (Oskar)
+ */
+ /* additional changes by Chris, removed code of flex parts that are unused */
+ 
+ 
+/* Browser Resets */
+.flex-container a:active,
+.flexslider a:active { outline: none;}
+.slides { margin: 0; padding: 0; list-style: none;} 
+
+/* FlexSlider Necessary Styles
+*********************************/ 
+
+/* Clearfix for the .slides element */
+.slides:after {content: "."; display: block; clear: both; visibility: hidden; line-height: 0; height: 0;} 
+html[xmlns] .slides {display: block;} 
+* html .slides {height: 1%;}
+
+/* No JavaScript Fallback */
+/* If you are not using another script, such as Modernizr, make sure you
+ * include js that eliminates this class on page load */
+.no-js .slides > li:first-child {display: block;}
+
+/*
+	SLIDESHOW MODULE
+*/
+
+.flex-container {
+	max-width: 100%;
+	position: relative;
+	zoom: 1;
+
+	a { text-decoration: none; border: 0; }
+
+	.slides {
+		@include pie-clearfix;
+
+		> li {
+			position: relative;
+			display: none;
+			max-height: 352px;
+			overflow-y: hidden;
+		}
+		img {
+			display: block;
+			width: 100%;
+			max-width: 100%;
+			margin-top: -30px;
+		}
+	}
+
+	&:hover .flex-direction-nav a {
+		opacity: 100;
+	}	
+}

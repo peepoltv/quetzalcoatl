@@ -1,0 +1,201 @@
+// Base Partial with resets and commons
+
+// Dependencies
+@import "compass";
+@import "vendor/boilerplate-1.0/reset";
+@import "vendor/typeplate/typeplate";
+
+// -- Brand Colors ------------------------------
+
+$branding-cool 			   : #8031A7;
+$branding-cool-shade	   : #5c0778;
+$branding-cool-tint		   : #995AB9;
+$branding-warm			   : #B94700;
+$branding-warm-tint		   : #c76c33;
+$branding-warm-shade	   : #ba3608;
+$branding-accent		   : #daaa00;
+$branding-accent-subtle	   : #e1e1e1;
+
+// Project Variables
+// ----------------------------------------
+// Use @include debug; to show a color overlay on the element when this is set to true.
+$debug                     : true;
+// Typography
+$base-font-family          : "HelveticaNeue", "Helvetica Neue", "HelveticaNeueRoman", "HelveticaNeue-Roman", "Helvetica Neue Roman", 'TeXGyreHerosRegular', "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif;
+$base-font-size            : 16px; /* Controls frameless grid sizing */
+$base-line-height          : 1.50; 
+$font-size-small		   : 0.875em;
+$font-color                : #333;
+$text-on-dark-bold		   : #fff;
+$text-on-dark-subtle	   : $branding-accent-subtle;
+$link-color                : $branding-warm; 
+$link-hover-color		   : #fff;
+$link-hover-bg-color       : $branding-warm-shade;
+$link-visited-color        : $branding-warm-tint; 
+// ETC
+$hr-color                  : #333;
+// Selection
+$selected-font-color       : #fff;
+$selected-background-color : #5c0778; /* branding-cool shade */
+// Lists
+$list-margin               : 1em 0;
+$list-padding              : 0 0 0 2em;
+// Container Width
+$container-width           : 1000px;
+// Use @if in-compatibility-mode() to add conditional CSS (useful for mixins).
+$compatibility-mode        : true, ie7 ie8 ie9 ff2 chrome9;
+// Borders
+$border-light-color	  	   : $branding-accent;
+$border-dark-color         : $branding-cool-shade;
+
+// -- Project Variables Overrides ---------
+
+$g-content-width           : 1000px;
+$g-border-radius           : 6px; 
+$g-inner-border-radius     : 4px; 
+
+// Hooks
+// ----------------------------------------
+// Mixins that are called from the Library files to add some extra styling.
+
+@mixin clearfix-micro() {
+    & {
+        *zoom: 1;
+    }
+    &:before,
+    &:after {
+        content: "";
+        display: table;
+    }
+    &:after {
+        clear: both;
+    }
+}
+
+@mixin hover-transition() {
+	& {
+		-webkit-transition: .3s all linear;
+		-moz-transition: .3s all linear;
+		-o-transition: .3s all linear;
+		transition: .3s all linear;
+	}
+}
+
+@mixin font-smoothing { /* USE SPARINGLY */
+	font-smooth: always;
+	-webkit-font-smoothing: antialiased;
+	@-moz-document url-prefix() {
+		text-shadow: 0 0 1px rgba(0,0,0,0.3);
+	}	
+}
+
+@mixin placeholder {
+  &.placeholder { @content }
+  &:-moz-placeholder { @content }
+  &::-webkit-input-placeholder { @content }
+}
+
+// Global Styling
+// ----------------------------------------
+// Calculate all H# Tags.
+/* @include htags-sizes($base-font-size + 20); */
+//@include simple-forms(auto, block-hints no-stars );
+
+/*
+h1 {
+	margin-bottom: 20px;
+}
+*/
+
+h2 {
+	margin-bottom: 10px;
+}
+
+h3, h4, h5, h6 {
+	margin-bottom: 10px;
+}
+
+// Global Classes
+
+.no-bullets {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+	-webkit-margin-before: 0;
+	-webkit-margin-after: 0;
+	-webkit-margin-start: 0;
+	-webkit-margin-end: 0;
+	-webkit-padding-start: 0;
+}
+
+.fleft {
+	float: left;
+}
+
+.fright {
+	float: right;
+}
+
+.clear-fix {
+	@include clearfix-micro();
+}
+
+.ir {
+	background-color: transparent;
+	border: 0;
+	color: transparent;
+	text-indent: -9999em;
+	text-shadow: none;
+	display: block;
+}
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+.simple-rounded { 
+	@include border-radius(6px, 6px);	
+}
+
+a:hover {
+	background-color: $link-hover-bg-color;
+}
+
+.one-liner {
+	display: block;
+}
+
+.follow-me-link::after {
+	content: "-->";
+}
+
+.small-screen {
+	@media screen and (max-width: 600px) {display: block;}
+}
+
+// The Partials
+// ----------------------------------------
+// Base styles thanks to html5boilerplate. This one uses the Hooks defined before.
+@import "vendor/boilerplate-2.0/styles";
+
+// -- Shared Partials
+  // Headers and related material go here.
+  /* @import "main/shared/headers"; */
+  // Footers and related material go here.
+  /* @import "main/shared/footers"; */
+  // Content and Related Material go here.
+  /* @import "main/shared/contents"; */
+
+// -- Layouts Partials
+  // The most general one goes first
+  @import "main/layouts/frameless";
+
+  // Compatibility
+  @import "ie";

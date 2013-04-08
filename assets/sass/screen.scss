@@ -1,0 +1,280 @@
+// Chris' fabulous custom framework based on Survival Kit
+
+// Dependencies
+@import "base/secure";
+@import "base/base";
+@import "vendor/bourbon/bourbon";
+@import "vendor/flexslider/flexslider";
+
+// Fonts
+
+@include font-face("LatoRegular", '../fonts/lato-reg-webfont');
+@include font-face("LatoItalic", '../fonts/lato-regita-webfont');
+@include font-face("LatoBlack", '../fonts/lato-bla-webfont');
+@include font-face("MissionScript", '../fonts/mission-script-webfont');
+
+$bold-font-stack: "HelveticaNeueBold", "HelveticaNeue-Bold", "Helvetica Neue Bold", "TeXGyreHerosBold", "TeXGyreHeros-Bold", "TeXGyreHeros Bold", "Helvetica Bold", "Tahoma Bold", "Arial Bold", sans-serif;
+
+$italic-font-stack: "HelveticaNeueItalic", "HelveticaNeue-Italic", "Helvetica Neue Italic", "TeXGyreHerosItalic", "TeXGyreHeros-Italic", "TeXGyreHeros Italic", "Helvetica Oblique", "Arial Italic", sans-serif;
+
+$brush-script-font-stack: Brush Script, "Brush Script", Brush Script MT, "Brush Script MT", Script MT Bold, "Script MT Bold", Gabriola, "Gabriola", Comic Sans MS, "Comic Sans MS", fantasy;
+
+// Custom Styles
+
+strong {
+	font-family: "LatoBlack", $bold-font-stack;
+	font-weight: normal;
+}
+
+body {
+	margin: 0 auto;
+	font-family: "LatoRegular", $base-font-family;
+	overflow-x: hidden; /*this hides scrollbar*/
+	@media screen and (max-width: 800px) {
+    font-size: 90%;
+    }
+}
+
+.wrapper {
+	max-width: $cols22;
+	@media screen and (max-width: 1280px) {
+    width: $cols18;
+    }
+    @media screen and (max-width: 1152px) {
+    width: $cols16;
+    }
+	@media screen and (max-width: 1024px) {
+    width: $cols15;
+    }
+    @media screen and (max-width: 960px) {
+    width: $cols14;
+    }
+    @media screen and (max-width: 800px) {
+    width: $cols14; /*body font-size 90%*/
+    }
+    @media screen and (max-width: 768px) {
+    width: $cols13; /*body font-size 90%*/
+    }
+    @media screen and (max-width: 600px) {
+    width: $cols10; /*body font-size 90%*/
+    }
+    @media screen and (max-width: 480px) {
+    width: $cols6;
+    }
+    @media screen and (max-width: 320px) {
+    width: $cols4;
+    }
+}
+
+.section {
+	max-width: 100%;
+	border-top: $border-light-color 3px solid;
+	padding: {
+		left: 15%;/*$cols3*/
+		right: 15%;
+	}
+	@media screen and (max-width: 800px) {
+		padding: {
+		left: 5%;
+		right: 5%;
+		}
+	}
+}
+
+.banner-text {
+	font-family: "MissionScript", $brush-script-font-stack;
+	font-size: 7.50em; /* 120px */
+	@media screen and (max-width: 600px) {font-size: 6.50em;}
+	& span {
+		margin-right: 8%;
+		@media screen and (max-width: 1152px) {margin-right: 5%;}
+		@media screen and (max-width: 1024px) {margin-right: 4%;}
+		@media screen and (max-width: 960px) {margin-right: 3%;}
+		display: block;
+		&:last-of-type {margin-right: 0;}
+	}
+	.bt1 {
+		color: $branding-warm-shade;
+		margin-top: 5%;
+	}
+	.bt3 {
+		color: $branding-cool-shade;
+		margin-top: 5%;
+	}
+	.bt2, .bt4 {
+		font-size: 166%;
+		color: $branding-accent;
+		margin-top: 2%;
+	}
+	.logo {
+		height: 238px;
+		width: 238px;
+		background: url('../images/logo.svg') top left no-repeat;
+		background-size: cover;
+		@media screen and (max-width: 800px) {height: 190px;width: 190px;}
+	}
+}
+
+.about {
+	background-color: $branding-warm-shade;
+	padding: {
+		top: 3%;
+		bottom: 2%;
+	}
+	.money-shot {
+			width: 34%; /*$cols4*/
+			@media screen and (max-width: 800px) {width: 25%;}
+			margin-left: 5%;
+			img {
+				width: 87%;
+				height: auto;
+			}
+	}
+	.romance-copy {
+		width: 54%; /*$cols7*/
+		margin-right: 5%;
+		@media screen and (max-width: 1024px) {font-size: 90%;line-height:1.45;}
+		@media screen and (max-width: 960px) {font-size: 80%;line-height:1.4;}
+		@media screen and (max-width: 800px) {width: 55%;}
+		@media screen and (max-width: 600px) {font-size: 70%;line-height:1.3;}
+		@include font-smoothing();
+		p {
+			color: $text-on-dark-bold;
+			font-size: 1.625em;	
+		}
+		.bold-flava {
+			color: $text-on-dark-bold;
+			font-family: "LatoBlack", $bold-font-stack;
+			font-size: 3.5em;
+			margin-top: .325em;
+			@media screen and (max-width: 600px) {font-size:3em;}
+		}
+		.elegant-flava {
+			color: $text-on-dark-bold;
+			font-family: "MissionScript", $brush-script-font-stack;
+			font-size: 3.5em;
+			margin-top: .125em;
+			@media screen and (max-width: 600px) {font-size:3em;}
+		}
+	}
+}
+
+
+.body-copy {
+		margin: 0 5%;
+	img {
+		width: 24%; /*$cols3*/
+		height: auto;
+		margin-right: 3%; /*$gutter*/
+		@media screen and (max-width: 800px) {display: none;}
+	}
+	p {
+		width: 73%;  /*$cols8*/
+		margin: 3% 0;
+		@media screen and (max-width: 960px) {font-size: 90%;line-height: 1.45;}
+		@media screen and (max-width: 800px) {width: 60%;}
+		@media screen and (max-width: 600px) {width: 90%;}
+	}
+}
+
+
+.mailing-list {
+	color: $branding-cool-shade;
+	background-color: $branding-warm-tint;
+	padding: {
+		top: 1.25%;
+		bottom: 1.5%;
+	}
+	.one-liner {
+		margin: {
+			left: 5%;
+			bottom: 1em;
+		}
+	}
+	.mc-embedded-subscribe-form {
+		margin-left: 5%;
+		input {border: 2px solid $border-dark-color;}
+		input[type="email"] {
+			color: $branding-cool-shade;
+			width: 258px;
+			height: 24px;
+			background: rgba(255,255,255,.3) url('../images/mail-icon.png') 96% 50% no-repeat;
+			margin-right: 18px;
+			padding: 6px 8px;
+			@include placeholder {
+				color: $branding-cool-shade;
+				font-family: "LatoItalic", $italic-font-stack;
+			}
+			&:hover {background-color:rgba(92,7,120,.3);}
+			&:focus {
+				background-color: transparent;
+				outline: none;
+				@include single-box-shadow($branding-cool-shade,0px,0px,4px,0px);
+			}
+		}
+		input[type="submit"] {
+			color: transparent;
+			width: 146px;
+			height: 40px;
+			background: $branding-cool url('../images/signup-button.svg') 50% 50% no-repeat;
+			&:hover {background-color: $branding-cool-shade;}
+			&:active {background-color: $branding-cool-tint;}
+		}
+	}
+}
+
+.info {
+	padding-top: 15px;
+	background-color: $branding-warm;
+	.social-media {	
+		padding-bottom: 1%;
+		margin: 0 5%;
+		li {
+			width: 24px;
+			height: 24px;
+			margin-right: 6px;
+			background-image: url('../images/smedia-sprites.svg');
+			background-repeat: no-repeat;
+			a:hover {background-color: transparent;}
+			&.smedia1 {
+				background-position: -2px -2px;
+				&:hover {background-position: -2px -28px;}
+			}
+			&.smedia2 {
+				background-position: -28px -2px;
+				&:hover {background-position: -28px -28px;}	
+			}
+			&.smedia3 {
+				background-position: -54px -2px;
+				&:hover {background-position: -54px -28px;}
+			}
+			&.smedia4 {
+				background-position: -80px -2px;
+				&:hover {background-position: -80px -28px;}
+			}
+			&.smedia5 {
+				background-position: -106px -2px;
+				&:hover {background-position: -106px -28px;}
+			}
+			&.smedia6 {
+				background-position: -132px -2px;
+				&:hover {background-position: -132px -28px;}
+			}
+			&.smedia7 {
+				background-position: -158px -2px;
+				&:hover {background-position: -158px -28px;}
+			}
+		}
+	}
+	.footer-copy {
+		font-size: $font-size-small;
+		color: $text-on-dark-subtle;
+		padding-bottom: 3%;
+		margin: 0 5%;
+		@media screen and (max-width: 1024px) {margin: 0 0 0 5%;}
+		@media screen and (max-width: 960px) {font-size: 84%;}
+		@media screen and (max-width: 600px) {width: 70%;}
+		@include font-smoothing();
+		a:link, a:visited {color: $text-on-dark-subtle;}
+	}
+}
