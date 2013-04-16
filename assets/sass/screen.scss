@@ -30,40 +30,16 @@ body {
 	margin: 0 auto;
 	font-family: "LatoRegular", $base-font-family;
 	overflow-x: hidden; /*this hides scrollbar*/
+	@media screen and (min-width: 1680px) {
+    font-size: 130%;
+    }
 	@media screen and (max-width: 800px) {
     font-size: 90%;
     }
 }
 
 .wrapper {
-	max-width: $cols26;
-	@media screen and (max-width: 1280px) {
-    width: $cols18;
-    }
-    @media screen and (max-width: 1152px) {
-    width: $cols16;
-    }
-	@media screen and (max-width: 1024px) {
-    width: $cols15;
-    }
-    @media screen and (max-width: 960px) {
-    width: $cols14;
-    }
-    @media screen and (max-width: 800px) {
-    width: $cols14; /*body font-size 90%*/
-    }
-    @media screen and (max-width: 768px) {
-    width: $cols13; /*body font-size 90%*/
-    }
-    @media screen and (max-width: 600px) {
-    width: $cols10; /*body font-size 90%*/
-    }
-    @media screen and (max-width: 480px) {
-    width: $cols8; /*body font-size 90%*/
-    }
-    @media screen and (max-width: 390px) {
-    width: $cols6; /*body font-size 90%*/
-    }
+	width:100%;
 }
 
 .section {
@@ -95,11 +71,11 @@ body {
 	& span {
 		margin-right: 8%;
 		display: block;
+		@media screen and (max-width: 1280px) {margin-right: 7%;}
 		@media screen and (max-width: 1152px) {margin-right: 5%;}
 		@media screen and (max-width: 1024px) {margin-right: 4%;}
 		@media screen and (max-width: 960px) {margin-right: 3%;}
 		@media screen and (max-width: 390px) {margin-right: 1%;}
-		&:last-of-type {margin-right: 0;}
 	}
 	.bt1 {
 		color: $branding-warm-shade;
@@ -115,13 +91,8 @@ body {
 		margin-top: 2%;
 	}
 	.logo {
-		height: 238px;
-		width: 238px;
-		background: url('../images/logo.svg') top left no-repeat;
-		background-size: cover;
-		@media screen and (max-width: 800px) {height: 190px;width: 190px;}
-		@media screen and (max-width: 480px) {height: 120px;width: 120px;}
-		@media screen and (max-width: 390px) {height: 80px;width: 80px;}
+		height: auto;
+		width: 27%;
 	}
 }
 
@@ -327,6 +298,7 @@ body {
 			@media screen and (max-width: 600px) {margin-bottom: 2%;}
 		}
 		.full-size {
+			text-indent: 0;
 			@media screen and (max-width: 480px) {display: none;}
 		}
 		.mobile-footer {

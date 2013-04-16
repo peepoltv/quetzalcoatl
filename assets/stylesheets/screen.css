@@ -736,31 +736,6 @@ td {
 /* @import "main/shared/headers"; */
 /* @import "main/shared/footers"; */
 /* @import "main/shared/contents"; */
-/*
-	Frameless			<http://framelessgrid.com/>
-	by Joni Korpi 		<http://jonikorpi.com/>
-	licensed under CC0	<http://creativecommons.org/publicdomain/zero/1.0/>
-*/
-/*
-	An easy way to zoom your entire layout in or out (as long as it's set in ems).
-	Just change the media queries to activate them.
-	Assuming your base font-size is 16:
-	- the first one zooms out by a factor of (16-2)/16 = 0.875
-	- the second one zooms in by a factor of (16+2)/16 = 1.125  
-*/
-/*
-@media screen and (max-width: 1px) {
-	body {
-		font-size: ($font-size - 2) / $em;
-	}
-}
-
-@media screen and (max-width: 1px) {
-	body {
-		font-size: ($font-size + 2) / $em;
-	}
-}
-*/
 /* Welcome to Compass. Use this file to write IE specific override styles.
  * Import this file using the following HTML or equivalent:
  * <!--[if IE]>
@@ -844,17 +819,21 @@ html[xmlns] .slides {
       max-height: 352px;
       min-height: 130px;
       overflow-y: hidden; }
-    /* line 56, ../sass/vendor/flexslider/_flexslider.scss */
+      @media screen and (min-width: 1440px) {
+        /* line 49, ../sass/vendor/flexslider/_flexslider.scss */
+        .flex-container .slides > li {
+          max-height: 555px; } }
+    /* line 57, ../sass/vendor/flexslider/_flexslider.scss */
     .flex-container .slides img {
       display: block;
       width: 100%;
       max-width: 100%;
       margin-top: -30px; }
       @media screen and (max-width: 390px) {
-        /* line 56, ../sass/vendor/flexslider/_flexslider.scss */
+        /* line 57, ../sass/vendor/flexslider/_flexslider.scss */
         .flex-container .slides img {
           margin-top: 0; } }
-  /* line 65, ../sass/vendor/flexslider/_flexslider.scss */
+  /* line 66, ../sass/vendor/flexslider/_flexslider.scss */
   .flex-container:hover .flex-direction-nav a {
     opacity: 100; }
 
@@ -897,57 +876,20 @@ body {
   font-family: "LatoRegular", "HelveticaNeue", "Helvetica Neue", "HelveticaNeueRoman", "HelveticaNeue-Roman", "Helvetica Neue Roman", "TeXGyreHerosRegular", "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif;
   overflow-x: hidden;
   /*this hides scrollbar*/ }
+  @media screen and (min-width: 1680px) {
+    /* line 29, ../sass/screen.scss */
+    body {
+      font-size: 130%; } }
   @media screen and (max-width: 800px) {
     /* line 29, ../sass/screen.scss */
     body {
       font-size: 90%; } }
 
-/* line 38, ../sass/screen.scss */
+/* line 41, ../sass/screen.scss */
 .wrapper {
-  max-width: 115.5em; }
-  @media screen and (max-width: 1280px) {
-    /* line 38, ../sass/screen.scss */
-    .wrapper {
-      width: 79.5em; } }
-  @media screen and (max-width: 1152px) {
-    /* line 38, ../sass/screen.scss */
-    .wrapper {
-      width: 70.5em; } }
-  @media screen and (max-width: 1024px) {
-    /* line 38, ../sass/screen.scss */
-    .wrapper {
-      width: 66em; } }
-  @media screen and (max-width: 960px) {
-    /* line 38, ../sass/screen.scss */
-    .wrapper {
-      width: 61.5em; } }
-  @media screen and (max-width: 800px) {
-    /* line 38, ../sass/screen.scss */
-    .wrapper {
-      width: 61.5em;
-      /*body font-size 90%*/ } }
-  @media screen and (max-width: 768px) {
-    /* line 38, ../sass/screen.scss */
-    .wrapper {
-      width: 57em;
-      /*body font-size 90%*/ } }
-  @media screen and (max-width: 600px) {
-    /* line 38, ../sass/screen.scss */
-    .wrapper {
-      width: 43.5em;
-      /*body font-size 90%*/ } }
-  @media screen and (max-width: 480px) {
-    /* line 38, ../sass/screen.scss */
-    .wrapper {
-      width: 34.5em;
-      /*body font-size 90%*/ } }
-  @media screen and (max-width: 390px) {
-    /* line 38, ../sass/screen.scss */
-    .wrapper {
-      width: 25.5em;
-      /*body font-size 90%*/ } }
+  width: 100%; }
 
-/* line 69, ../sass/screen.scss */
+/* line 45, ../sass/screen.scss */
 .section {
   max-width: 100%;
   border-top: #daaa00 3px solid;
@@ -955,117 +897,101 @@ body {
   /*$cols3*/
   padding-right: 15%; }
   @media screen and (max-width: 800px) {
-    /* line 69, ../sass/screen.scss */
+    /* line 45, ../sass/screen.scss */
     .section {
       padding-left: 5%;
       padding-right: 5%; } }
 
-/* line 84, ../sass/screen.scss */
+/* line 60, ../sass/screen.scss */
 .banner-text {
   font-family: "MissionScript", Brush Script, "Brush Script", Brush Script MT, "Brush Script MT", Script MT Bold, "Script MT Bold", Gabriola, "Gabriola", Comic Sans MS, "Comic Sans MS", fantasy;
   font-size: 7.50em;
   /* 120px */ }
   @media screen and (max-width: 800px) {
-    /* line 84, ../sass/screen.scss */
+    /* line 60, ../sass/screen.scss */
     .banner-text {
       margin-left: 8%; } }
   @media screen and (max-width: 600px) {
-    /* line 84, ../sass/screen.scss */
+    /* line 60, ../sass/screen.scss */
     .banner-text {
       font-size: 6.50em;
       margin-left: 2%; } }
   @media screen and (max-width: 480px) {
-    /* line 84, ../sass/screen.scss */
+    /* line 60, ../sass/screen.scss */
     .banner-text {
       font-size: 4.50em;
       margin-left: 7%; } }
   @media screen and (max-width: 390px) {
-    /* line 84, ../sass/screen.scss */
+    /* line 60, ../sass/screen.scss */
     .banner-text {
       font-size: 3.50em;
       margin-left: 5%;
       margin-bottom: -.5rem; } }
-  /* line 95, ../sass/screen.scss */
+  /* line 71, ../sass/screen.scss */
   .banner-text span {
     margin-right: 8%;
     display: block; }
+    @media screen and (max-width: 1280px) {
+      /* line 71, ../sass/screen.scss */
+      .banner-text span {
+        margin-right: 7%; } }
     @media screen and (max-width: 1152px) {
-      /* line 95, ../sass/screen.scss */
+      /* line 71, ../sass/screen.scss */
       .banner-text span {
         margin-right: 5%; } }
     @media screen and (max-width: 1024px) {
-      /* line 95, ../sass/screen.scss */
+      /* line 71, ../sass/screen.scss */
       .banner-text span {
         margin-right: 4%; } }
     @media screen and (max-width: 960px) {
-      /* line 95, ../sass/screen.scss */
+      /* line 71, ../sass/screen.scss */
       .banner-text span {
         margin-right: 3%; } }
     @media screen and (max-width: 390px) {
-      /* line 95, ../sass/screen.scss */
+      /* line 71, ../sass/screen.scss */
       .banner-text span {
         margin-right: 1%; } }
-    /* line 102, ../sass/screen.scss */
-    .banner-text span:last-of-type {
-      margin-right: 0; }
-  /* line 104, ../sass/screen.scss */
+  /* line 80, ../sass/screen.scss */
   .banner-text .bt1 {
     color: #ba3608;
     margin-top: 5%; }
-  /* line 108, ../sass/screen.scss */
+  /* line 84, ../sass/screen.scss */
   .banner-text .bt3 {
     color: #5c0778;
     margin-top: 5%; }
-  /* line 112, ../sass/screen.scss */
+  /* line 88, ../sass/screen.scss */
   .banner-text .bt2, .banner-text .bt4 {
     font-size: 166%;
     color: #daaa00;
     margin-top: 2%; }
-  /* line 117, ../sass/screen.scss */
+  /* line 93, ../sass/screen.scss */
   .banner-text .logo {
-    height: 238px;
-    width: 238px;
-    background: url("../images/logo.svg") top left no-repeat;
-    background-size: cover; }
-    @media screen and (max-width: 800px) {
-      /* line 117, ../sass/screen.scss */
-      .banner-text .logo {
-        height: 190px;
-        width: 190px; } }
-    @media screen and (max-width: 480px) {
-      /* line 117, ../sass/screen.scss */
-      .banner-text .logo {
-        height: 120px;
-        width: 120px; } }
-    @media screen and (max-width: 390px) {
-      /* line 117, ../sass/screen.scss */
-      .banner-text .logo {
-        height: 80px;
-        width: 80px; } }
+    height: auto;
+    width: 27%; }
 
-/* line 128, ../sass/screen.scss */
+/* line 99, ../sass/screen.scss */
 .about {
   background-color: #ba3608;
   padding-top: 3%;
   padding-bottom: 2%; }
-  /* line 134, ../sass/screen.scss */
+  /* line 105, ../sass/screen.scss */
   .about .money-shot {
     width: 34%;
     /*$cols4*/
     margin-left: 5%; }
     @media screen and (max-width: 800px) {
-      /* line 134, ../sass/screen.scss */
+      /* line 105, ../sass/screen.scss */
       .about .money-shot {
         width: 25%; } }
     @media screen and (max-width: 480px) {
-      /* line 134, ../sass/screen.scss */
+      /* line 105, ../sass/screen.scss */
       .about .money-shot {
         display: none; } }
-    /* line 139, ../sass/screen.scss */
+    /* line 110, ../sass/screen.scss */
     .about .money-shot img {
       width: 87%;
       height: auto; }
-  /* line 144, ../sass/screen.scss */
+  /* line 115, ../sass/screen.scss */
   .about .romance-copy {
     width: 54%;
     /*$cols7*/
@@ -1077,63 +1003,63 @@ body {
       text-shadow: 0 0 1px rgba(0, 0, 0, 0.3); }
  }
     @media screen and (max-width: 1024px) {
-      /* line 144, ../sass/screen.scss */
+      /* line 115, ../sass/screen.scss */
       .about .romance-copy {
         font-size: 90%;
         line-height: 1.45; } }
     @media screen and (max-width: 960px) {
-      /* line 144, ../sass/screen.scss */
+      /* line 115, ../sass/screen.scss */
       .about .romance-copy {
         font-size: 80%;
         line-height: 1.4; } }
     @media screen and (max-width: 800px) {
-      /* line 144, ../sass/screen.scss */
+      /* line 115, ../sass/screen.scss */
       .about .romance-copy {
         width: 55%; } }
     @media screen and (max-width: 600px) {
-      /* line 144, ../sass/screen.scss */
+      /* line 115, ../sass/screen.scss */
       .about .romance-copy {
         font-size: 70%;
         line-height: 1.3; } }
     @media screen and (max-width: 480px) {
-      /* line 144, ../sass/screen.scss */
+      /* line 115, ../sass/screen.scss */
       .about .romance-copy {
         margin-left: 5%;
         width: 75%; } }
-    /* line 153, ../sass/screen.scss */
+    /* line 124, ../sass/screen.scss */
     .about .romance-copy p {
       color: white;
       font-size: 1.625em; }
-    /* line 157, ../sass/screen.scss */
+    /* line 128, ../sass/screen.scss */
     .about .romance-copy .bold-flava {
       color: white;
       font-family: "LatoBlack", "HelveticaNeueBold", "HelveticaNeue-Bold", "Helvetica Neue Bold", "TeXGyreHerosBold", "TeXGyreHeros-Bold", "TeXGyreHeros Bold", "Helvetica Bold", "Tahoma Bold", "Arial Bold", sans-serif;
       font-size: 3.5em;
       margin-top: .325em; }
       @media screen and (max-width: 600px) {
-        /* line 157, ../sass/screen.scss */
+        /* line 128, ../sass/screen.scss */
         .about .romance-copy .bold-flava {
           font-size: 3em; } }
-    /* line 164, ../sass/screen.scss */
+    /* line 135, ../sass/screen.scss */
     .about .romance-copy .elegant-flava {
       color: white;
       font-family: "MissionScript", Brush Script, "Brush Script", Brush Script MT, "Brush Script MT", Script MT Bold, "Script MT Bold", Gabriola, "Gabriola", Comic Sans MS, "Comic Sans MS", fantasy;
       font-size: 3.5em;
       margin-top: .125em; }
       @media screen and (max-width: 600px) {
-        /* line 164, ../sass/screen.scss */
+        /* line 135, ../sass/screen.scss */
         .about .romance-copy .elegant-flava {
           font-size: 3em; } }
 
-/* line 175, ../sass/screen.scss */
+/* line 146, ../sass/screen.scss */
 .body-copy {
   margin: 0 5%; }
   @media screen and (max-width: 480px) {
-    /* line 175, ../sass/screen.scss */
+    /* line 146, ../sass/screen.scss */
     .body-copy {
       padding-top: 2.25%;
       padding-bottom: 3.5%; } }
-  /* line 183, ../sass/screen.scss */
+  /* line 154, ../sass/screen.scss */
   .body-copy img {
     width: 24%;
     /*$cols3*/
@@ -1141,66 +1067,66 @@ body {
     margin-right: 3%;
     /*$gutter*/ }
     @media screen and (max-width: 600px) {
-      /* line 183, ../sass/screen.scss */
+      /* line 154, ../sass/screen.scss */
       .body-copy img {
         margin-top: 5%; } }
     @media screen and (max-width: 480px) {
-      /* line 183, ../sass/screen.scss */
+      /* line 154, ../sass/screen.scss */
       .body-copy img {
         display: none; } }
-  /* line 190, ../sass/screen.scss */
+  /* line 161, ../sass/screen.scss */
   .body-copy p {
     width: 73%;
     /*$cols8*/
     margin: 3% 0; }
     @media screen and (max-width: 960px) {
-      /* line 190, ../sass/screen.scss */
+      /* line 161, ../sass/screen.scss */
       .body-copy p {
         font-size: 90%;
         line-height: 1.45; } }
     @media screen and (max-width: 800px) {
-      /* line 190, ../sass/screen.scss */
+      /* line 161, ../sass/screen.scss */
       .body-copy p {
         width: 60%; } }
     @media screen and (max-width: 480px) {
-      /* line 190, ../sass/screen.scss */
+      /* line 161, ../sass/screen.scss */
       .body-copy p {
         width: 90%; } }
     @media screen and (max-width: 390px) {
-      /* line 190, ../sass/screen.scss */
+      /* line 161, ../sass/screen.scss */
       .body-copy p {
         width: 75%;
         font-size: 1em; } }
 
-/* line 201, ../sass/screen.scss */
+/* line 172, ../sass/screen.scss */
 .mailing-list {
   color: #5c0778;
   background-color: #c76c33;
   padding-top: 1.25%;
   padding-bottom: 1.5%; }
   @media screen and (max-width: 480px) {
-    /* line 201, ../sass/screen.scss */
+    /* line 172, ../sass/screen.scss */
     .mailing-list {
       padding-top: 2.25%;
       padding-bottom: 3.5%; } }
-  /* line 214, ../sass/screen.scss */
+  /* line 185, ../sass/screen.scss */
   .mailing-list .one-liner {
     margin-left: 5%;
     margin-bottom: 2%; }
     @media screen and (max-width: 390px) {
-      /* line 214, ../sass/screen.scss */
+      /* line 185, ../sass/screen.scss */
       .mailing-list .one-liner {
         width: 75%;
         font-size: 1em;
         margin-bottom: 3%;
         line-height: 1.3; } }
-  /* line 226, ../sass/screen.scss */
+  /* line 197, ../sass/screen.scss */
   .mailing-list .mc-embedded-subscribe-form {
     margin-left: 5%; }
-    /* line 228, ../sass/screen.scss */
+    /* line 199, ../sass/screen.scss */
     .mailing-list .mc-embedded-subscribe-form input {
       border: 2px solid #5c0778; }
-    /* line 229, ../sass/screen.scss */
+    /* line 200, ../sass/screen.scss */
     .mailing-list .mc-embedded-subscribe-form input[type="email"] {
       color: #5c0778;
       width: 258px;
@@ -1221,57 +1147,57 @@ body {
         color: #5c0778;
         font-family: "LatoItalic", "HelveticaNeueItalic", "HelveticaNeue-Italic", "Helvetica Neue Italic", "TeXGyreHerosItalic", "TeXGyreHeros-Italic", "TeXGyreHeros Italic", "Helvetica Oblique", "Arial Italic", sans-serif; }
       @media screen and (max-width: 600px) {
-        /* line 229, ../sass/screen.scss */
+        /* line 200, ../sass/screen.scss */
         .mailing-list .mc-embedded-subscribe-form input[type="email"] {
           width: 221px;
           height: 15px;
           background-position: 96% 49%;
           background-size: 8%; } }
       @media screen and (max-width: 390px) {
-        /* line 229, ../sass/screen.scss */
+        /* line 200, ../sass/screen.scss */
         .mailing-list .mc-embedded-subscribe-form input[type="email"] {
           margin-bottom: 3%; } }
-      /* line 247, ../sass/screen.scss */
+      /* line 218, ../sass/screen.scss */
       .mailing-list .mc-embedded-subscribe-form input[type="email"]:hover {
         background-color: rgba(92, 7, 120, 0.3); }
-      /* line 248, ../sass/screen.scss */
+      /* line 219, ../sass/screen.scss */
       .mailing-list .mc-embedded-subscribe-form input[type="email"]:focus {
         background-color: transparent;
         outline: none;
         -webkit-box-shadow: 0px 0px 4px 0px #5c0778;
         box-shadow: 0px 0px 4px 0px #5c0778; }
-    /* line 254, ../sass/screen.scss */
+    /* line 225, ../sass/screen.scss */
     .mailing-list .mc-embedded-subscribe-form input[type="submit"] {
       color: transparent;
       width: 146px;
       height: 40px;
       background: #8031a7 url("../images/signup-button.svg") 50% 50% no-repeat; }
       @media screen and (max-width: 600px) {
-        /* line 254, ../sass/screen.scss */
+        /* line 225, ../sass/screen.scss */
         .mailing-list .mc-embedded-subscribe-form input[type="submit"] {
           width: 120px;
           height: 31px;
           background-size: 50%; } }
-      /* line 264, ../sass/screen.scss */
+      /* line 235, ../sass/screen.scss */
       .mailing-list .mc-embedded-subscribe-form input[type="submit"]:hover {
         background-color: #5c0778; }
-      /* line 265, ../sass/screen.scss */
+      /* line 236, ../sass/screen.scss */
       .mailing-list .mc-embedded-subscribe-form input[type="submit"]:active {
         background-color: #995ab9; }
 
-/* line 271, ../sass/screen.scss */
+/* line 242, ../sass/screen.scss */
 .info {
   padding-top: 15px;
   background-color: #b94700; }
-  /* line 274, ../sass/screen.scss */
+  /* line 245, ../sass/screen.scss */
   .info .social-media {
     padding-bottom: 1%;
     margin: 0 5%; }
     @media screen and (max-width: 600px) {
-      /* line 274, ../sass/screen.scss */
+      /* line 245, ../sass/screen.scss */
       .info .social-media {
         margin-bottom: 2%; } }
-    /* line 278, ../sass/screen.scss */
+    /* line 249, ../sass/screen.scss */
     .info .social-media li {
       width: 24px;
       height: 24px;
@@ -1279,55 +1205,55 @@ body {
       background-image: url("../images/smedia-sprites.svg");
       background-repeat: no-repeat; }
       @media screen and (max-width: 390px) {
-        /* line 278, ../sass/screen.scss */
+        /* line 249, ../sass/screen.scss */
         .info .social-media li {
           margin-right: 10px; } }
-      /* line 285, ../sass/screen.scss */
+      /* line 256, ../sass/screen.scss */
       .info .social-media li a:hover {
         background-color: transparent; }
-      /* line 286, ../sass/screen.scss */
+      /* line 257, ../sass/screen.scss */
       .info .social-media li.smedia1 {
         background-position: -2px -2px; }
-        /* line 288, ../sass/screen.scss */
+        /* line 259, ../sass/screen.scss */
         .info .social-media li.smedia1:hover {
           background-position: -2px -28px; }
-      /* line 290, ../sass/screen.scss */
+      /* line 261, ../sass/screen.scss */
       .info .social-media li.smedia2 {
         background-position: -28px -2px; }
-        /* line 292, ../sass/screen.scss */
+        /* line 263, ../sass/screen.scss */
         .info .social-media li.smedia2:hover {
           background-position: -28px -28px; }
-      /* line 294, ../sass/screen.scss */
+      /* line 265, ../sass/screen.scss */
       .info .social-media li.smedia3 {
         background-position: -54px -2px; }
-        /* line 296, ../sass/screen.scss */
+        /* line 267, ../sass/screen.scss */
         .info .social-media li.smedia3:hover {
           background-position: -54px -28px; }
-      /* line 298, ../sass/screen.scss */
+      /* line 269, ../sass/screen.scss */
       .info .social-media li.smedia4 {
         background-position: -80px -2px; }
-        /* line 300, ../sass/screen.scss */
+        /* line 271, ../sass/screen.scss */
         .info .social-media li.smedia4:hover {
           background-position: -80px -28px; }
-      /* line 302, ../sass/screen.scss */
+      /* line 273, ../sass/screen.scss */
       .info .social-media li.smedia5 {
         background-position: -106px -2px; }
-        /* line 304, ../sass/screen.scss */
+        /* line 275, ../sass/screen.scss */
         .info .social-media li.smedia5:hover {
           background-position: -106px -28px; }
-      /* line 306, ../sass/screen.scss */
+      /* line 277, ../sass/screen.scss */
       .info .social-media li.smedia6 {
         background-position: -132px -2px; }
-        /* line 308, ../sass/screen.scss */
+        /* line 279, ../sass/screen.scss */
         .info .social-media li.smedia6:hover {
           background-position: -132px -28px; }
-      /* line 310, ../sass/screen.scss */
+      /* line 281, ../sass/screen.scss */
       .info .social-media li.smedia7 {
         background-position: -158px -2px; }
-        /* line 312, ../sass/screen.scss */
+        /* line 283, ../sass/screen.scss */
         .info .social-media li.smedia7:hover {
           background-position: -158px -28px; }
-  /* line 316, ../sass/screen.scss */
+  /* line 287, ../sass/screen.scss */
   .info .footer-copy {
     font-size: 0.875em;
     color: #e1e1e1;
@@ -1340,33 +1266,36 @@ body {
       text-shadow: 0 0 1px rgba(0, 0, 0, 0.3); }
  }
     @media screen and (max-width: 1024px) {
-      /* line 316, ../sass/screen.scss */
+      /* line 287, ../sass/screen.scss */
       .info .footer-copy {
         margin: 0 0 0 5%; } }
     @media screen and (max-width: 960px) {
-      /* line 316, ../sass/screen.scss */
+      /* line 287, ../sass/screen.scss */
       .info .footer-copy {
         font-size: 84%; } }
     @media screen and (max-width: 600px) {
-      /* line 316, ../sass/screen.scss */
+      /* line 287, ../sass/screen.scss */
       .info .footer-copy {
         width: 70%; } }
-    /* line 325, ../sass/screen.scss */
+    /* line 296, ../sass/screen.scss */
     .info .footer-copy a:link, .info .footer-copy a:visited {
       color: #e1e1e1; }
     @media screen and (max-width: 600px) {
-      /* line 326, ../sass/screen.scss */
+      /* line 297, ../sass/screen.scss */
       .info .footer-copy .one-liner {
         margin-bottom: 2%; } }
-    @media screen and (max-width: 480px) {
-      /* line 329, ../sass/screen.scss */
-      .info .footer-copy .full-size {
-        display: none; } }
-    /* line 332, ../sass/screen.scss */
+    /* line 300, ../sass/screen.scss */
+    .info .footer-copy .full-size {
+      text-indent: 0; }
+      @media screen and (max-width: 480px) {
+        /* line 300, ../sass/screen.scss */
+        .info .footer-copy .full-size {
+          display: none; } }
+    /* line 304, ../sass/screen.scss */
     .info .footer-copy .mobile-footer {
       display: none; }
       @media screen and (max-width: 480px) {
-        /* line 332, ../sass/screen.scss */
+        /* line 304, ../sass/screen.scss */
         .info .footer-copy .mobile-footer {
           display: block;
           margin-top: 1em; } }
