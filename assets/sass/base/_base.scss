@@ -3,7 +3,6 @@
 // Dependencies
 @import "compass";
 @import "vendor/boilerplate-1.0/reset";
-@import "vendor/typeplate/typeplate";
 
 // -- Brand Colors ------------------------------
 
@@ -50,9 +49,6 @@ $border-dark-color         : $branding-cool-shade;
 
 // -- Project Variables Overrides ---------
 
-$g-content-width           : 1000px;
-$g-border-radius           : 6px; 
-$g-inner-border-radius     : 4px; 
 
 // Hooks
 // ----------------------------------------
@@ -98,22 +94,17 @@ $g-inner-border-radius     : 4px;
 // Global Styling
 // ----------------------------------------
 // Calculate all H# Tags.
-/* @include htags-sizes($base-font-size + 20); */
-//@include simple-forms(auto, block-hints no-stars );
 
-/*
-h1 {
-	margin-bottom: 20px;
-}
-*/
+// using 4:5, major third
 
-h2 {
-	margin-bottom: 10px;
-}
+h1 {font-size: 1.75em; /*28px*/}
+h2 {font-size: 1.563em; /*25px*/}
+h3 {font-size: 1.4em;} /*22.4px*/
+h4 {font-size: 1.25em;} /*20px*/
+h5 {font-size: 1.12em;} /*17.920px*/
+h6 {font-size: $font-size-small;}
 
-h3, h4, h5, h6 {
-	margin-bottom: 10px;
-}
+h2, h3, h4, h5, h6 {margin-bottom: 10px;}
 
 // Global Classes
 
@@ -195,7 +186,6 @@ a:hover {
 
 // -- Layouts Partials
   // The most general one goes first
-
 
   // Compatibility
   @import "ie";

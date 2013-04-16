@@ -79,16 +79,16 @@ body {
 	}
 	.bt1 {
 		color: $branding-warm-shade;
-		margin-top: 5%;
+		margin-top: 3%;
 	}
 	.bt3 {
 		color: $branding-cool-shade;
-		margin-top: 5%;
+		margin-top: 3%;
 	}
 	.bt2, .bt4 {
-		font-size: 166%;
+		font-size: 160%;
+		line-height: 1.2;
 		color: $branding-accent;
-		margin-top: 2%;
 	}
 	.logo {
 		height: auto;
@@ -136,7 +136,7 @@ body {
 			color: $text-on-dark-bold;
 			font-family: "MissionScript", $brush-script-font-stack;
 			font-size: 3.5em;
-			margin-top: .125em;
+			margin-top: -.325em;
 			@media screen and (max-width: 600px) {font-size:3em;}
 		}
 	}

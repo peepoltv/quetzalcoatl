@@ -51,351 +51,42 @@ table {
 input, select {
   vertical-align: middle; }
 
-/*
-+---------------------------------------------------------------------+
-|        _                               _         _                  |
-|       | |_  _   _  _ __    ___  _ __  | |  __ _ | |_  ___           |
-|       | __|| | | || '_ \  / _ \| '_ \ | | / _` || __|/ _ \          |
-|       | |_ | |_| || |_) ||  __/| |_) || || (_| || |_|  __/          |
-|        \__| \__, || .__/  \___|| .__/ |_| \__,_| \__|\___|          |
-|             |___/ |_|          |_|                                  |
-|                                                                     |
-|                                                                     |
-| URL: http://typeplate.com                                           |
-| VERSION: 1.0.0                                                      |
-| Github: https://github.com/typePlate/typeplate.github.com           |
-| AUTHORS: Zachary Kain (@zakkain) & Dennis Gaebel (@gryghostvisuals) |
-| LICENSE: Creative Commmons                                          |
-| http://creativecommons.org/licenses/by/3.0                          |
-|                                                                     |
-+---------------------------------------------------------------------+
-*/
-@font-face {
-  font-family: "Ampersand";
-  src: local("Georgia"), local("Garamond"), local("Palatino"), local("Book Antiqua");
-  unicode-range: U+0026; }
-
-@font-face {
-  font-family: "Ampersand";
-  src: local("Georgia");
-  unicode-range: U+270C; }
-
-/* line 261, ../sass/vendor/typeplate/_typeplate.scss */
-body {
-  word-wrap: break-word; }
-
-/* line 265, ../sass/vendor/typeplate/_typeplate.scss */
-pre code {
-  word-wrap: normal; }
-
-/**
- * Dropcap Sass @include
- * Use the following Sass @include with any selector you feel necessary.
- *
-	@include dropcap($float: left, $font-size: 4em, $font-family: inherit, $text-indent: 0, $margin: inherit, $padding: inherit, $color: inherit, $lineHeight: 1, $bg: transparent);
- *
- * Extend this object into your custom stylesheet.
- *
- */
-/* line 376, ../sass/vendor/typeplate/_typeplate.scss */
-html {
-  font: normal 112.5%/1.65 serif; }
-
-/* line 380, ../sass/vendor/typeplate/_typeplate.scss */
-body {
-  -webkit-hyphens: auto;
-  -moz-hyphens: auto;
-  -ms-hyphens: auto;
-  hyphens: auto;
-  color: #444444; }
-
-/* line 396, ../sass/vendor/typeplate/_typeplate.scss */
-h1, h2, h3, h4, h5, h6 {
-  text-rendering: optimizeLegibility;
-  line-height: 1;
-  margin-top: 0; }
-
-/* line 411, ../sass/vendor/typeplate/_typeplate.scss */
-.tera {
-  font-size: 117px;
-  font-size: 6.5rem;
-  margin-bottom: 0.25385rem; }
-
-/* line 411, ../sass/vendor/typeplate/_typeplate.scss */
-.giga {
-  font-size: 90px;
-  font-size: 5rem;
-  margin-bottom: 0.33rem; }
-
-/* line 411, ../sass/vendor/typeplate/_typeplate.scss */
-.mega {
-  font-size: 72px;
-  font-size: 4rem;
-  margin-bottom: 0.4125rem; }
-
-/* line 411, ../sass/vendor/typeplate/_typeplate.scss */
-.alpha, h1 {
-  font-size: 60px;
-  font-size: 3.33333rem;
-  margin-bottom: 0.495rem; }
-
-/* line 411, ../sass/vendor/typeplate/_typeplate.scss */
-.beta, h2 {
-  font-size: 48px;
-  font-size: 2.66667rem;
-  margin-bottom: 0.61875rem; }
-
-/* line 411, ../sass/vendor/typeplate/_typeplate.scss */
-.gamma, h3 {
-  font-size: 36px;
-  font-size: 2rem;
-  margin-bottom: 0.825rem; }
-
-/* line 411, ../sass/vendor/typeplate/_typeplate.scss */
-.delta, h4 {
-  font-size: 24px;
-  font-size: 1.33333rem;
-  margin-bottom: 1.2375rem; }
-
-/* line 411, ../sass/vendor/typeplate/_typeplate.scss */
-.epsilon, h5 {
-  font-size: 21px;
-  font-size: 1.16667rem;
-  margin-bottom: 1.41429rem; }
-
-/* line 411, ../sass/vendor/typeplate/_typeplate.scss */
-.zeta, h6 {
-  font-size: 18px;
-  font-size: 1rem;
-  margin-bottom: 1.65rem; }
-
-/* line 429, ../sass/vendor/typeplate/_typeplate.scss */
-p + p {
-  text-indent: 1.5em; }
-
-/* line 448, ../sass/vendor/typeplate/_typeplate.scss */
-pre code {
-  white-space: -moz-pre-wrap;
-  white-space: pre-wrap; }
-
-/* line 453, ../sass/vendor/typeplate/_typeplate.scss */
-pre {
-  white-space: pre; }
-
-/* line 457, ../sass/vendor/typeplate/_typeplate.scss */
-code {
-  white-space: pre;
-  font-family: monospace; }
-
-/**
- * Abbreviations Markup
- *
-	<abbr title="hyper text markup language">HMTL</abbr>
- *
- * Extend this object into your markup.
- *
- */
-/* line 474, ../sass/vendor/typeplate/_typeplate.scss */
-abbr {
-  font-variant: small-caps;
-  font-weight: 600;
-  text-transform: lowercase;
-  color: gray; }
-  /* line 476, ../sass/vendor/typeplate/_typeplate.scss */
-  abbr:hover {
-    cursor: help; }
-
-/* line 490, ../sass/vendor/typeplate/_typeplate.scss */
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  color: #222222; }
-
-/**
- * Lining Definition Style Markup
- *
-	<dl class="lining">
-		<dt><b></b></dt>
-		<dd></dd>
-	</dl>
- *
- * Extend this object into your markup.
- *
- */
-/* line 317, ../sass/vendor/typeplate/_typeplate.scss */
-.lining dt,
-.lining dd {
-  display: inline;
-  margin: 0; }
-/* line 324, ../sass/vendor/typeplate/_typeplate.scss */
-.lining dt + dt:before,
-.lining dd + dt:before {
-  content: "\A";
-  white-space: pre; }
-/* line 332, ../sass/vendor/typeplate/_typeplate.scss */
-.lining dd + dd:before {
-  content: ", "; }
-/* line 336, ../sass/vendor/typeplate/_typeplate.scss */
-.lining dd:before {
-  content: ": ";
-  margin-left: -0.2rem; }
-
-/**
- * Dictionary Definition Style Markup
- *
-	<dl class="dictionary-style">
-		<dt><b></b></dt>
-			<dd></dd>
-	</dl>
- *
- * Extend this object into your markup.
- *
- */
-/* line 344, ../sass/vendor/typeplate/_typeplate.scss */
-.dictionary-style dt {
-  display: inline;
-  counter-reset: definitions; }
-  /* line 348, ../sass/vendor/typeplate/_typeplate.scss */
-  .dictionary-style dt + dt:before {
-    content: ", ";
-    margin-left: -0.2rem; }
-/* line 354, ../sass/vendor/typeplate/_typeplate.scss */
-.dictionary-style dd {
-  display: block;
-  counter-increment: definitions; }
-  /* line 357, ../sass/vendor/typeplate/_typeplate.scss */
-  .dictionary-style dd:before {
-    content: counter(definitions, decimal) ". "; }
-
-/**
- * Stats Tab Markup
- *
-	<ul class="stats-tabs">
-		<li><a href="#">[value]<b>[name]</b></a></li>
-	</ul>
- *
- * Extend this object into your markup.
- *
- */
-/* line 542, ../sass/vendor/typeplate/_typeplate.scss */
-.stats-tabs {
-  padding: 0; }
-  /* line 544, ../sass/vendor/typeplate/_typeplate.scss */
-  .stats-tabs li {
-    display: inline-block;
-    margin: 0 0.625rem 0 0;
-    padding: 0 0.625rem 0 0;
-    border-right: 0.125rem solid #cccccc; }
-    /* line 549, ../sass/vendor/typeplate/_typeplate.scss */
-    .stats-tabs li:last-child {
-      margin: 0;
-      padding: 0;
-      border: none; }
-    /* line 554, ../sass/vendor/typeplate/_typeplate.scss */
-    .stats-tabs li a {
-      display: inline-block;
-      font-size: 1.5rem;
-      font-weight: bold; }
-      /* line 558, ../sass/vendor/typeplate/_typeplate.scss */
-      .stats-tabs li a b {
-        display: block;
-        margin: 0.125rem 0 0 0;
-        font-size: 0.875rem;
-        font-weight: normal; }
-
-/**
- * Blockquote Markup
- *
-	<blockquote cite="">
-		<p>&Prime;&Prime;</p>
-		<cite>
-			<small><a href=""></a></small>
-		</cite>
-	</blockquote>
- *
- * Extend this object into your markup.
- *
- */
-/**
- * Pull Quotes Markup
- *
-	<aside class="pull-quote">
-		<blockquote>
-			<p></p>
-		</blockquote>
-	</aside>
- *
- * Extend this object into your custom stylesheet.
- *
- */
-/* line 638, ../sass/vendor/typeplate/_typeplate.scss */
-.pull-quote {
-  position: relative;
-  padding: 1em; }
-  /* line 620, ../sass/vendor/typeplate/_typeplate.scss */
-  .pull-quote:before, .pull-quote:after {
-    height: 1em;
-    opacity: 0.15;
-    position: absolute;
-    font-size: 4em; }
-  /* line 626, ../sass/vendor/typeplate/_typeplate.scss */
-  .pull-quote:before {
-    content: '“';
-    top: 0em;
-    left: 0em; }
-  /* line 631, ../sass/vendor/typeplate/_typeplate.scss */
-  .pull-quote:after {
-    content: '”';
-    bottom: 0em;
-    right: 0em; }
-
-/**
- * Figures Markup
- *
-	<figure>
-		<figcaption>
-			<strong>Fig. 4.2 | </strong>Type Anatomy, an excerpt from Mark Boulton's book<cite title="http://designingfortheweb.co.uk/book/part3/part3_chapter11.php">"Designing for the Web"</cite>
-		</figcaption>
-	</figure>
- *
- * Extend this object into your markup.
- *
- */
-/**
- * Footnote Markup : Replace 'X' with your unique number for each footnote
- *
-	<article>
-		<p><sup><a href="#fn-itemX" id="fn-returnX"></a></sup></p>
-		<footer>
-			<ol class="foot-notes">
-				<li id="fn-itemX"><a href="#fn-returnX">↩</a></li>
-			</ol>
-		</footer>
-	</article>
- *
- * Extend this object into your markup.
- *
- */
 /* Controls frameless grid sizing */
 /* branding-cool shade */
-/* @include htags-sizes($base-font-size + 20); */
-/*
+/* line 100, ../sass/base/_base.scss */
 h1 {
-	margin-bottom: 20px;
-}
-*/
-/* line 110, ../sass/base/_base.scss */
+  font-size: 1.75em;
+  /*28px*/ }
+
+/* line 101, ../sass/base/_base.scss */
 h2 {
+  font-size: 1.563em;
+  /*25px*/ }
+
+/* line 102, ../sass/base/_base.scss */
+h3 {
+  font-size: 1.4em; }
+
+/*22.4px*/
+/* line 103, ../sass/base/_base.scss */
+h4 {
+  font-size: 1.25em; }
+
+/*20px*/
+/* line 104, ../sass/base/_base.scss */
+h5 {
+  font-size: 1.12em; }
+
+/*17.920px*/
+/* line 105, ../sass/base/_base.scss */
+h6 {
+  font-size: 0.875em; }
+
+/* line 107, ../sass/base/_base.scss */
+h2, h3, h4, h5, h6 {
   margin-bottom: 10px; }
 
-/* line 114, ../sass/base/_base.scss */
-h3, h4, h5, h6 {
-  margin-bottom: 10px; }
-
-/* line 120, ../sass/base/_base.scss */
+/* line 111, ../sass/base/_base.scss */
 .no-bullets {
   margin: 0;
   padding: 0;
@@ -406,26 +97,26 @@ h3, h4, h5, h6 {
   -webkit-margin-end: 0;
   -webkit-padding-start: 0; }
 
-/* line 131, ../sass/base/_base.scss */
+/* line 122, ../sass/base/_base.scss */
 .fleft {
   float: left; }
 
-/* line 135, ../sass/base/_base.scss */
+/* line 126, ../sass/base/_base.scss */
 .fright {
   float: right; }
 
-/* line 62, ../sass/base/_base.scss */
+/* line 58, ../sass/base/_base.scss */
 .clear-fix {
   *zoom: 1; }
-/* line 66, ../sass/base/_base.scss */
+/* line 62, ../sass/base/_base.scss */
 .clear-fix:before, .clear-fix:after {
   content: "";
   display: table; }
-/* line 70, ../sass/base/_base.scss */
+/* line 66, ../sass/base/_base.scss */
 .clear-fix:after {
   clear: both; }
 
-/* line 143, ../sass/base/_base.scss */
+/* line 134, ../sass/base/_base.scss */
 .ir {
   background-color: transparent;
   border: 0;
@@ -434,7 +125,7 @@ h3, h4, h5, h6 {
   text-shadow: none;
   display: block; }
 
-/* line 152, ../sass/base/_base.scss */
+/* line 143, ../sass/base/_base.scss */
 .visuallyhidden {
   border: 0;
   clip: rect(0 0 0 0);
@@ -445,26 +136,26 @@ h3, h4, h5, h6 {
   position: absolute;
   width: 1px; }
 
-/* line 163, ../sass/base/_base.scss */
+/* line 154, ../sass/base/_base.scss */
 .simple-rounded {
   -webkit-border-radius: 6px 6px;
   -moz-border-radius: 6px / 6px;
   border-radius: 6px / 6px; }
 
-/* line 167, ../sass/base/_base.scss */
+/* line 158, ../sass/base/_base.scss */
 a:hover {
   background-color: #ba3608; }
 
-/* line 171, ../sass/base/_base.scss */
+/* line 162, ../sass/base/_base.scss */
 .one-liner {
   display: block; }
 
-/* line 175, ../sass/base/_base.scss */
+/* line 166, ../sass/base/_base.scss */
 .follow-me-link::after {
   content: "-->"; }
 
 @media screen and (max-width: 600px) {
-  /* line 179, ../sass/base/_base.scss */
+  /* line 170, ../sass/base/_base.scss */
   .small-screen {
     display: block; } }
 
@@ -954,16 +645,16 @@ body {
   /* line 80, ../sass/screen.scss */
   .banner-text .bt1 {
     color: #ba3608;
-    margin-top: 5%; }
+    margin-top: 3%; }
   /* line 84, ../sass/screen.scss */
   .banner-text .bt3 {
     color: #5c0778;
-    margin-top: 5%; }
+    margin-top: 3%; }
   /* line 88, ../sass/screen.scss */
   .banner-text .bt2, .banner-text .bt4 {
-    font-size: 166%;
-    color: #daaa00;
-    margin-top: 2%; }
+    font-size: 160%;
+    line-height: 1.2;
+    color: #daaa00; }
   /* line 93, ../sass/screen.scss */
   .banner-text .logo {
     height: auto;
@@ -1045,7 +736,7 @@ body {
       color: white;
       font-family: "MissionScript", Brush Script, "Brush Script", Brush Script MT, "Brush Script MT", Script MT Bold, "Script MT Bold", Gabriola, "Gabriola", Comic Sans MS, "Comic Sans MS", fantasy;
       font-size: 3.5em;
-      margin-top: .125em; }
+      margin-top: -.325em; }
       @media screen and (max-width: 600px) {
         /* line 135, ../sass/screen.scss */
         .about .romance-copy .elegant-flava {
@@ -1134,15 +825,15 @@ body {
       background: rgba(255, 255, 255, 0.3) url("../images/mail-icon.png") 96% 50% no-repeat;
       margin-right: 18px;
       padding: 6px 8px; }
-      /* line 93, ../sass/base/_base.scss */
+      /* line 89, ../sass/base/_base.scss */
       .mailing-list .mc-embedded-subscribe-form input[type="email"].placeholder {
         color: #5c0778;
         font-family: "LatoItalic", "HelveticaNeueItalic", "HelveticaNeue-Italic", "Helvetica Neue Italic", "TeXGyreHerosItalic", "TeXGyreHeros-Italic", "TeXGyreHeros Italic", "Helvetica Oblique", "Arial Italic", sans-serif; }
-      /* line 94, ../sass/base/_base.scss */
+      /* line 90, ../sass/base/_base.scss */
       .mailing-list .mc-embedded-subscribe-form input[type="email"]:-moz-placeholder {
         color: #5c0778;
         font-family: "LatoItalic", "HelveticaNeueItalic", "HelveticaNeue-Italic", "Helvetica Neue Italic", "TeXGyreHerosItalic", "TeXGyreHeros-Italic", "TeXGyreHeros Italic", "Helvetica Oblique", "Arial Italic", sans-serif; }
-      /* line 95, ../sass/base/_base.scss */
+      /* line 91, ../sass/base/_base.scss */
       .mailing-list .mc-embedded-subscribe-form input[type="email"]::-webkit-input-placeholder {
         color: #5c0778;
         font-family: "LatoItalic", "HelveticaNeueItalic", "HelveticaNeue-Italic", "Helvetica Neue Italic", "TeXGyreHerosItalic", "TeXGyreHeros-Italic", "TeXGyreHeros Italic", "Helvetica Oblique", "Arial Italic", sans-serif; }
