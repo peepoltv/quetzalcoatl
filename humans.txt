@@ -3,13 +3,16 @@
 
 # TEAM
 
-    <name> -- <role> -- <twitter>
+    Chris Rogers -- Head of Design (web design and front-end developer) -- @nomadicism
+    Felipe Heusser -- Co-Founder -- @fheusser
+    Jeff Warren -- Co-founder -- http://unterbahn.com
 
 # THANKS
 
-    <name>
+    Platform technical development by Platanus -- http://platan.us
 
 # TECHNOLOGY COLOPHON
 
     HTML5, CSS3
     jQuery, Modernizr
+    HTML5 Boilerplate, SASS, Compass, Bourbon.io
