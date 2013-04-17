@@ -60,24 +60,23 @@ h1 {
 
 /* line 101, ../sass/base/_base.scss */
 h2 {
-  font-size: 1.563em;
-  /*25px*/ }
-
-/* line 102, ../sass/base/_base.scss */
-h3 {
   font-size: 1.4em; }
 
 /*22.4px*/
-/* line 103, ../sass/base/_base.scss */
-h4 {
+/* line 102, ../sass/base/_base.scss */
+h3 {
   font-size: 1.25em; }
 
 /*20px*/
-/* line 104, ../sass/base/_base.scss */
-h5 {
+/* line 103, ../sass/base/_base.scss */
+h4 {
   font-size: 1.12em; }
 
 /*17.920px*/
+/* line 104, ../sass/base/_base.scss */
+h5 {
+  font-size: 16px; }
+
 /* line 105, ../sass/base/_base.scss */
 h6 {
   font-size: 0.875em; }
@@ -990,3 +989,33 @@ body {
         .info .footer-copy .mobile-footer {
           display: block;
           margin-top: 1em; } }
+
+/* line 312, ../sass/screen.scss */
+.supplemental .header {
+  font-size: 0.875em;
+  background-color: #b94700;
+  padding: 7px 5% 10px 5%;
+  /* USE SPARINGLY */
+  font-smooth: always;
+  -webkit-font-smoothing: antialiased;
+  @-moz-document url-prefix() {
+    text-shadow: 0 0 1px rgba(0, 0, 0, 0.3); }
+ }
+  /* line 317, ../sass/screen.scss */
+  .supplemental .header a:link, .supplemental .header a:visited {
+    color: #e1e1e1; }
+/* line 319, ../sass/screen.scss */
+.supplemental .section[role="main"] {
+  padding-top: 20px;
+  padding-bottom: 30px; }
+  /* line 324, ../sass/screen.scss */
+  .supplemental .section[role="main"] .body-copy {
+    width: 100%; }
+    /* line 326, ../sass/screen.scss */
+    .supplemental .section[role="main"] .body-copy h1 {
+      margin-bottom: 20px;
+      font-family: "LatoBlack", "HelveticaNeueBold", "HelveticaNeue-Bold", "Helvetica Neue Bold", "TeXGyreHerosBold", "TeXGyreHeros-Bold", "TeXGyreHeros Bold", "Helvetica Bold", "Tahoma Bold", "Arial Bold", sans-serif; }
+    /* line 327, ../sass/screen.scss */
+    .supplemental .section[role="main"] .body-copy h2 {
+      margin-bottom: 5px;
+      font-family: "LatoBlack", "HelveticaNeueBold", "HelveticaNeue-Bold", "Helvetica Neue Bold", "TeXGyreHerosBold", "TeXGyreHeros-Bold", "TeXGyreHeros Bold", "Helvetica Bold", "Tahoma Bold", "Arial Bold", sans-serif; }

@@ -307,3 +307,24 @@ body {
 		}
 	}
 }
+
+.supplemental {
+	.header {
+		font-size: $font-size-small;
+		background-color: $branding-warm;
+		padding: 7px 5% 10px 5%;
+		@include font-smoothing();
+		a:link, a:visited {color: $text-on-dark-subtle;}
+	}
+	.section[role="main"] {
+		padding: {
+			top:20px;
+			bottom:30px;
+		}
+		.body-copy {
+			width: 100%;
+			h1 {margin-bottom: 20px;font-family: "LatoBlack", $bold-font-stack;}
+			h2 {margin-bottom: 5px;font-family: "LatoBlack", $bold-font-stack;}
+		}
+	}
+}
