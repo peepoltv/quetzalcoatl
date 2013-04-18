@@ -1,9 +1,8 @@
 quetzalcoatl
 ============
 
-For the temporary "dev server".
-The Peepol.tv landing page (redesign) is living there until I completely finish it.
-Will soft launch at the Peepol.tv domain shortly and will periodically replace after updates within this repository.
+This repository is for the peepol.tv landing page (on dev server).
+Landing page is currently live. Further changes to page will be made here first, and then transfered to production server.
 
 **Production Stack:**
 
